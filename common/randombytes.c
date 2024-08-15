@@ -6,8 +6,10 @@
 
 //TODO Maybe we do not want to use the hardware RNG for all randomness, but instead only read a seed and then expand that using fips202.
 
-int randombytes(uint8_t *obuf, size_t len)
+int randombytes(void *output, size_t len)
 {
+
+    uint8_t *obuf = output;
     union
     {
         unsigned char aschar[4];
@@ -35,7 +37,7 @@ int randombytes(uint8_t *obuf, size_t len)
 }
 
 #else /* NONRANDOM FALLBACK IMPLEMENTATION */
-#warning Using a non-random randombytes
+#pragma message("Using a non-random randombytes")
 
 #include <string.h>
 
@@ -111,8 +113,9 @@ void randombytes_regen(void)
   outleft = sizeof(out_buf);
 }
 
-int randombytes(uint8_t* buf, size_t xlen)
+int randombytes(void *output, size_t xlen)
 {
+  uint8_t *buf = output;
   while (xlen > 0) {
     if (!outleft) {
       randombytes_regen();

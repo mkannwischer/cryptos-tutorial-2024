@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "hal.h"
 #include "randombytes.h"
 #include "ref.h"
+#include "m4.h"
 
 #define Q 3329
 
