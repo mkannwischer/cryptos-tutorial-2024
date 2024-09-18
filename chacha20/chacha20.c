@@ -26,16 +26,6 @@ static void store_littleendian(unsigned char *x,uint32 u)
   x[3] = u;
 }
 
-static uint32 rotate(uint32 a, int d)
-{
-  uint32 t;
-  t = a >> (32-d);
-  a <<= d;
-  return a | t;
-}
-
-
-
 static int crypto_core_chacha20(
         unsigned char *out,
   const unsigned char *in,

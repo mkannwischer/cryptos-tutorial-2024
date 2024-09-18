@@ -2,6 +2,14 @@
 
 
 /*
+static uint32 rotate(uint32 a, int d)
+{
+  uint32 t;
+  t = a >> (32-d);
+  a <<= d;
+  return a | t;
+}
+
 static void quarterround(uint32 *a, uint32 *b, uint32 *c, uint32 *d)
 {
   *a = *a + *b;
@@ -28,5 +36,6 @@ static void quarterround(uint32 *a, uint32 *b, uint32 *c, uint32 *d)
 .align 2
 quarterround:
     push {r4-r11, r14}
+
 
     pop {r4-r11, pc}
