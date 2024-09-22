@@ -9,7 +9,7 @@ Windows users are advised to install a virtual machine (e.g., using
 
 1) Clone this repository recursively:
 ```
-git clone --recurse-submodule https://github.com/mkannwischer/cryptos-tutorial-2023
+git clone --recurse-submodule https://github.com/mkannwischer/cryptos-tutorial-2024
 ```
 
 2) Install [qemu](https://www.qemu.org/) (>= 5.2):
