@@ -96,4 +96,4 @@ in another terminal and pressing the reset button of the board.
 
 # Tutorial instructions
 
-Follow the instructions on the slides (XXX).
+Follow the instructions on the [slides](https://kannwischer.eu/talks/2024092223_cryptos.pdf).
